@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>commentpage</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="top" class="lesson">
+    <h1>Welcome To Nanodegree Notes- 2015</h1>
+    <div align="center"><b>Done by : Noor Aljibouri</b></div>
+    </div>
+     <div  class="buttons">
+        <button type="button" class="btn btn-default">
+        <a href="#lesson-1">Lesson 1</a></button>  
+        <button type="button" class="btn btn-default">
+        <a href="#lesson-2">Lesson 2</a></button> 
+        <button type="button" class="btn btn-default">
+          <a href="#lesson-1">Lesson 3</a></button> 
+        <button type="button" class="btn btn-default">
+        <a href="#lesson-4">Lesson 4</a></button>  
+        <button type="button" class="btn btn-default">
+          <a href="#lesson-5">Lesson 5 </a></button>
+     </div>
+    <div  class="form">
+    <b>Add your Comment </b>
+    <br>
+    <br>
+    <form  action="/addcomment" method="post">
+    	<div>Name :</div>
+    	<div><input type="text" name="name"></div>
+    	<div>Comment :</div>
+    	<div><textarea name="comment" rows="6" cols="60"></textarea></div>
+    	<div align="center"><input type="submit" value="Submit"></div>
+    </form>
+    </div>
+<hr>
+
+    {% for usercomment in comment_query %}
+    <div class="comments">
+        {% if usercomment.name %}
+		    <b>{{ usercomment.name }}</b> 
+	    {% else %}
+		     <b>An anonymous person</b>
+	    {% endif %}
+		     <div>-wrote: {{ usercomment.comment | escape }}</div>
+		    -at: {{ usercomment.date }}  
+		<br>
+		<br>
+     </div>
+	{% endfor %}
+	<div class="lesson">
+     <h1 id="lesson-1"> lesson 1 : The Main Concepts Of The Web.</h1>
+      <!--i used <ul> to brif the main concept in the lesson defines an unordered (bulleted) list-->
+    <p id="brif1">
+        <ul>
+          <li> Programing.</li>
+          <li> World Wide Web (WWW) and Web Functions.</li>
+          <li> HTML.</li>
+          <li>HTTP.</li>
+          </ul>
+    </p>
+    <div class="concept">
+      <!--i used class attribute to lets me assign to it one or more subtypes. These subtypes may then be used in CSS code for styling purposes-->
+         <div class="title">
+              <b> What is the Programming?</b>
+         </div>
+         <div class="disecription">
+               <p> The programming is telling the computer what to do in language he can understand.
+                    Programming helps you to find new way of thinking and organized your thought to find  the solutions of any problems you face, and helps you to get new skills.</p>              
+           </div>
+      </div>
+    <div class="concept">
+         <div class="title">
+               <b>World Wide Web (WWW)</b>
+           </div>
+         <div class="disecription">
+                <p>The web is a collection of HTML documents (Hyper text markup language), and every web page in the web even it is image, video, text..ect written with HTML code. These web pages is connected together by hyper links. The World Wide Web is based
+                  on several different technologies that make it possible for users to locate and share information through the Internet. These include Web browsers, Hypertext Markup Language (HTML) and Hypertext Transfer Protocol
+                  <!--<a> is used here for connected to external link-->
+                  <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">(HTTP)</a>. When the programmer gives the instructions to the computer using the browser(the program that runs on your computer to display every thing found on the web.), from
+                  the browser it's goes to the internet(the largest computer network in the world) and from the network and through the <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">(HTTP)</a> (the main protocol of the web) it's go to the
+                  servers (is a high-performance computer designed to process requests and deliver data over a network connection).
+                  </p>
+        </div>
+   </div>
+   <div class="concept">
+        <div class="title">
+               <b>What is The HTML?</b></div>
+        <div class="disecription">
+              <p>Now we will talk about HTML language because it's the authoring language used to    create documents on the World Wide Web. The definition of HTML is Hypertext Markup Language is:</p>
+                <ul>
+                    <li>Hypertext is the method by which you move around on the web by clicking on special text called hyperlinks which bring you to the next page. The fact that it is hyper just means it is not linear, there is no set order to do things in.</li>
+                    <li>Markup is what HTML tags do to the text inside them. They mark it as a certain type of text.</li>
+                    <li>HTML is a Language, as it has code-words and syntax like any other language.</li>
+                </ul>
+            
+        </div>
+    </div>
+    <div class="concept">
+          <div class="title"><b>HTML Tags And Elements</b></div>
+          <div class="disecription">
+                <p>The HTML is consisting of elements that is a tags and the contents. he tags are what separate normal text from HTML code.You might know them as the words between the &lt; angle-bracktes &gt;.</p>
+                <p><b> &lt; tag name &gt; Content &lt; /tag name &gt;</b></p>
+                <p>The first tag in a pair is the start tag, the second tag is the end tag,(The end tag is written like the start tag, but with a slash before the tag name.
+                </p>
+          </div>
+    </div>
+    <div class="concept">
+          <div class="title"><b>Are The Computers Stupid ?</b></div>
+          <div class="disecription">
+                <p>Yes, computers are stupid because they do exactly what we tell them to do, even if we make mistake accidentally they continue working with this mistake and maybe cause a big problems or disasters.</p>
+          </div>
+    </div>
+    <a href="#top"> Back To The Top </a>
+ </div><!--this is the close div for lesson1 div-->
+
+<div class="lesson"><!--the div start for lesson 2-->
+     <h1 id="lesson-2">Lesson 2: Basic Structure Of The Web Page.</h1>
+    <div class="brif">
+          <ul>
+            <li> CSS.</li>
+            <li> DOM</li>
+            <li> HTML tree structure.</li>
+            <li>Boxes.</li>
+          </ul>
+     </div>
+   <div class="concept">
+        <div class="title"><b> What is the CSS?</b></div>
+        <div class="disecription">
+              <p>The definition of CSS is (Cascading Style Sheets), is a style sheet language used for describing the look and formatting of a document written in a markup language.For example, CSS covers fonts, colours, margins, lines, height, width, background
+                images, advanced positions and many other things.</p>
+         </div>
+    </div>
+   <div class="concept">
+        <div class="title"><b>Tree Structure </b></div>
+        <div class="disecription">
+              <p>HTML trees are hierarchical widgets that expand and collapse to progressively hide or reveal content. The expanding folder structure of Google Drive is one example of tree structure.</p>
+        <!--here i import the image from my computer, using folder of image in my project's folder-->
+              <img src="styles/image/tree-example.jpg" alt="tree-example">
+              <p>When an element is clicked to expand or collapse a tree structure of content, it is visually apparent that content has been revealed or hidden. However, a screen reader is unable to determine if either of these changes have occurred on a page
+                as a result of a click on a page.The nodes of every document are organized in a tree structure, called the
+                <!--the image here is from external web site, so i used its adress-->
+                <a href="http://www.w3.org/TR/DOM-Level-2-Core/introduction.html"> DOM </a>tree (Document Object Model). With the Document Object Model, programmers can build documents, navigate their structure, and add, modify, or delete elements and content.
+                The DOM represents a document as a tree. The tree is made up of parent-child relationships, a parent can have one or many children nodes.</P>
+               <img src="styles/image/simpledom.jpg" alt="tree-DOM"></P>
+                <P>At the top level, there is an html node, with two children: head and body, among which only head has a child tag title. HTML tags are element nodes in DOM tree, pieces of text become text nodes. Both of them are nodes, just the type is different.</p>
+        </div><!-- close div for desicription tree structure-->
+  </div><!-- the close div for div concept (tree structure)-->
+
+    <div class="concept">
+         <div class="title">
+               <b>Boxes Every Where.</b>
+           </div>
+          <div class="disecription">
+                <p>Every thing on website seems to be box!!What about other shapes like circle,triangle..ect?? The answer is, these shapes is not what are they look like they are still box. Using boxes in web page design is alot easier for the designer to using
+                  these boxes to design or re-arrange the page every time, just by moving these boxes and change their location.</p>
+          
+                <img src="http://www.wolf21.com/blog/wp-content/uploads/2011/06/web-structure.jpg" alt="web page structure">
+           </div>
+    </div>
+
+    <div class="concept">
+        <div class="title">
+              <b>Avoiding Repetition.</b>
+         </div>
+         <div class="desicription">
+                <p>Avoiding repetition one of principle of good programer,<a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">(DRY - Don’t repeat yourself) </a> - This is probably the single most fundamental tenet in programming is to avoid repetition.</p>
+                <p>Repeatedly doing the same thing over & over in different HTML elements to give them a specific style results in repeated code or very similar code with minor differences. When changes need to be made, it is difficult to remember every place that style is repeated in the HTML elements. Having to manually make those changes in every location can lead to typos or errors, or result in a difference in style where the programmer might want the same style applied.Avoiding repetition is avoid the errores  by and give Consistency when using CSS style.</p>
+                    
+        </div><!-- close div desicription-->
+     <div> <!--close the concept avoiding repetition-->
+  </div><!--close the lesson 2-->
+  <a href="#top"> Back To The Top </a>
+    <div class="lesson">
+      <h1 id="lesson-3"> Lesson 3: Introduction to Serious Programming.</h1>
+      <div id="brif3"> <!--i used id because the breif is uniq for very lesson-->
+         <ul>
+            <li>Computer.</li>
+            <li>Program And Programming.</li>
+            <li>Computer Science.</li>
+            <li>Web Crawler.</li>
+            <li>Python.</li>
+         </ul>
+        </div> 
+        <div class="concept">
+        <div class="title">
+           <b>Program And Programming.</b>
+         </div>
+          <div class="desicription">
+              <p> A computer is a general-purpose device that can be programmed to carry out a set of arithmetic or logical operations automatically. Since a sequence of operations can be readily changed, the computer can solve more than one kind of problem.</p>
+              <table  style="width:80%" > <!--i used table to make a comparison-->
+                <tr>
+                  <td>Computer Program</td>
+                  <td>Programming</td>
+                </tr>
+                <tr>
+                  <td>A computer program, or just a program, is a sequence of instructions, written to perform a specified task on a computer.[1] A computer requires programs to function, typically executing the program's instructions in a central processor.[2] The program has an executable form that the computer can use directly to execute the instructions.</td>
+                  <td>Computer programming (often shortened to programming) is a process that leads from an original formulation of a computing problem to executable computer programs. Programming involves activities such as analysis, developing understanding, generating algorithms, verification of requirements of algorithms including their correctness and resources consumption,</td>
+                </tr>
+              </table> <br>
+          </div>
+           </div>
+
+           <div class="concept">
+              <div class="title">
+                <b>Web Crawler</b>
+              </div>
+                <div class="desicription">
+                  <p> A web crawler (also known as a web spider or web robot) is a program or automated script which browses the World Wide Web in a methodical, automated manner.This process is called Web crawling or spidering.Many legitimate sites, in particular search engines, use spidering as a means of providing up-to-date data.Web crawlers are mainly used to create a copy of all the visited pages for later processing by a search engine, that will index the downloaded pages to provide fast searches. Web search engines and some other sites use Web crawling or spidering software to update their web content or indexes of others sites' web content. Web crawlers can copy all the pages they visit for later processing by a search engine which indexes the downloaded pages so the users can search much more efficiently.</p>
+                </div>
+           </div>
+
+           <div class="concept">
+             <div class="title">
+              <b>Python</b>
+             </div>
+             <div class="desicription">
+              <p>Python is a widely used general-purpose, high-level programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than would be possible in languages such as C++ or Java.Python was conceived in the late 1980s and its implementation was started in December 1989 by Guido van Rossum.Python uses dynamic typing and a combination of reference counting and a cycle-detecting garbage collector for memory management. An important feature of Python is dynamic name resolution (late binding), which binds method and variable names during program execution.</p>
+             </div>
+           </div>
+
+          <div class="concept">
+             <div class="title">
+               <b>Python Expressions</b>
+             </div>
+             <div class="desicription">
+              <p>Expressions represent something, like a number, a string, or an instance of a class. Any value is an expression!Anything that does something is a statement. Any assignment to a variable or function call is a statement. Any value contained in that statement in an expression.</p>
+              <p> foo = "hello" is a statement that assigns foo to the value of the expression "hello". Since the code "hello" is a simple expression, meaning it contains no operations, nothing is actually evaluated, so foo is just assigned to "hello". More complex expressions actually evaluate things, like adding numbers. Using the word expression seems like it is making things more confusing. Expressions are nothing but values, except they can have operations like addition or subtraction.eval evaluates the string as if it were a python expression. Eval does takes an expression as an argument. However, there's nothing special about this since every single value is an expression. Saying "eval takes a value as an argument" is saying exactly the same thing, but it sounds much simpler</p>
+             </div>
+          </div> 
+          <div class="concept">
+            <div class="title">
+                <b>Variable in Python</b>
+            </div>
+            <div class="desicription">
+               <p>As the name implies, a variable is something which can change. A variable is a way of referring to a memory location used by a computer program. A variable is a symbolic name for this physical location. This memory location contains values, like numbers, text or more complicated types. The way to introduce the variable is to use assignment statment, means:</p>
+               <p align="center"><mark>Name= Expression<mark></p>
+               <p>The name of the left side refer to the value that expression has, the name can be any sequence of numbers and letters as well as under-score, as well as start with letter.</p>
+            </div>
+          </div>
+          <div class="concept">
+            <div class="title">
+              <b> What is the difference between what the sign "=" means in 2+3=5 and my_variable=5?</b>
+            </div>
+            <div class="desicreption">
+              <p>In 2+3=5 the "=" means the summation of 2 and 3 equal 5, but in the second one my_variable=5 the 
+              "=" here means assigns values from right side operands to left side operand. So remember that although we use = for assignment it does not mean equality.You should think of the = sign as un arrow, showing that the value of the right side evaluates to is being assigned to the variable name on the left side.</p>
+            </div>
+          </div>
+          <div class="concept">
+            <div class="title">
+               <b>What is the diffrence between 2+2 and "2"+"2"?</b>
+            </div>
+            <div class="desicreption">
+              <p>The sequence of characters or numbers surrounded by quotes;either single or double called (<b>string</b>).
+              The operator (+) between two string means (<b>concatenation</b>).</p>
+              <p align="center"><mark>&lt;string&gt;+&lt;string&gt;</mark>     outputs the concatenation of the two string<p>.<p>So the output of 2+2 is 4,
+              the output of "2"+"2" is 22.</p>
+            </div>
+          </div>
+          <div class="concept">
+            <div class="title">
+              <b>What is function?</b>
+            </div>
+            <div class="desicription">
+              <p>A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing.You can define functions to provide the required functionality. Here are simple rules to define a function in Python.</p>
+              <ul>
+                <li>Function blocks begin with the keyword def followed by the function name and parentheses ( ( ) ).</li>
+                <li>Any input parameters or arguments should be placed within these parentheses. You can also define parameters inside these parentheses.</li>
+                <li>The first statement of a function can be an optional statement - the documentation string of the function or docstring.</li>
+                <li>The code block within every function starts with a colon (:) and is indented.</li>
+                <li>The statement return [expression] exits a function, optionally passing back an expression to the caller. A return statement with no arguments is the same as return None.</li>
+              </ul>
+              <p>Defining a function only gives it a name, specifies the parameters that are to be included in the function and structures the blocks of code.Once the basic structure of a function is finalized, you can execute it by calling it from another function or directly from the Python prompt. Following is the example to call printme() function.</p>
+            </div>
+          </div>
+          <div class="concept">
+            <div class="title">
+              <b>Why functions are so important?</b>
+            </div>
+            <div class="desicription">
+              <p>The advantages of using functions are:
+              <ul>
+                <li>Reducing duplication of code</li>
+                <li>Decomposing complex problems into simpler pieces</li>
+                <li>Improving clarity of the code</li>
+                <li>Reuse of code</li>
+                <li>Information hiding</li>
+              </ul>
+              </p>
+            </div>
+          </div>        
+    </div> <!-- close lesson 3-->
+    <a href="#top"> Back To The Top </a>
+ <div class="lesson">
+      <h1 id="lesson-4"> Lesson 4: Using Database On Web Page.</h1>
+      <div id="brif3"> <!--i used id because the breif is uniq for very lesson-->
+        <ul>
+          <li>What is network?</li>
+          <li>Measuring Networks</li>
+          <li>Protocol</li>
+          <li>What is URLs?</li>
+          <li>HTTP</li>
+          <li>What happens when I follow a link? How the server works?</li>
+          <li>Modulus and Dictionaries</li>
+          <li>Two HTTP Request Methods: GET and POST</li>
+          <li>Database</li>
+          <li>Validation</li>
+          <li>Templates</li>
+        </ul>
+      </div>
+    <div class="concept">
+        <div class="title">
+          <b>What is network?</b>
+        </div>
+        <div class="desicription">
+          <p>A network is a group of entities that can communicate, even though they are not all directly connected. In computer networks, networked computing devices exchange data with each other along network links (data connections). The connections between nodes are established using either cable media or wireless media. The best-known computer network is the Internet.Network computer devices that originate, route and terminate the data are called network nodes.</p>
+        </div>
+        </div>
+        <div class="concept">
+          <div class="title">
+            <b>Measuring Networks</b>
+          </div>
+          <div class="desicription">
+            <p>latency: is a time interval between the stimulation and response, or, from a more general point of view, as a time delay between the cause and the effect of some physical change in the system being observed.
+             Latency is physically a consequence of the limited velocity with which any physical interaction can propagate. This velocity is always lower than or equal to the speed of light. Therefore, every physical system that has spatial dimensions different from zero will experience some sort of latency, regardless of the nature of stimulation that it has been exposed to.</p>
+             <p>Bandwidth :is the bit-rate of available or consumed information capacity expressed typically in metric multiples of bits per second.A bit is the basic unit of information in computing and digital communications. A bit can have only one of two values, and may therefore be physically implemented with a two-state device. These values are most commonly represented as either a 0 or 1. The term bit is a portmanteau of binary digit.</p>
+          </div>
+          </div>
+          <div class="concept">
+            <div class="title">
+              <b> Protocol </b>
+            </div>
+            <div class="desicription">
+              <p>Protocol: is a system of rules that allow two or more entities of a communications system to transmit information via any kind of variation of a physical quantity.Communicating systems use well-defined formats (protocol) for exchanging messages. Each message has an exact meaning intended to elicit a response from a range of possible responses pre-determined for that particular situation. The specified behavior is typically independent of how it is to be implemented. Communications protocols have to be agreed upon by the parties involved.To reach agreement, a protocol may be developed into a technical standard. A programming language describes the same for computations, so there is a close analogy between protocols and programming languages: protocols are to communications as programming languages are to computations.</p>
+            </div>
+          </div>
+          <div class="concept">
+            <div class="title">
+              <b>What is URLs?</b>
+            </div>
+            <div class="desicription">
+              <p>A Uniform Resource Locator (URL) (commonly informally referred to as a web address, although the term is not defined identically) is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. A URL is a specific type of Uniform Resource Identifier (URI), although many people use the two terms interchangeably.</p>
+            </div>
+          </div>
+          <div class="concept">
+            <div class="title">
+              <b>HTTP</b>
+            </div>
+            <div class="desicription">
+              <p>The Hypertext Transfer Protocol (HTTP) is an application protocol for distributed, collaborative, hypermedia information systems.[1] HTTP is the foundation of data communication for the World Wide Web.</p>
+            </div>
+          </div>
+          </div class="concept">
+            <div class="title">
+              <b> What happens when I follow a link? How the server works?</b>
+            </div>
+            <div class="desicription">
+              <ul>
+                <li><p>Step 1: Parsing the URL</p>
+                <p>The first thing the browser has to do is to look at the URL of the new document to find out how to get hold of the new document. Most URLs have this basic form: "protocol://server/request-URI". The protocol part describes how to tell the server which document the you want and how to retrieve it. The server part tells the browser which server to contact, and the request-URI is the name used by the web server to identify the document. (I use the term request-URI since it's the one used by the HTTP standard, and I can't think of anything else that is general enough to not be misleading.)</p></li>
+                <li><p>Step 2: Sending the request</p>
+                <p>Usually, the protocol is "http". To retrieve a document via HTTP the browser transmits the following request to the server: "GET /request-URI HTTP/version", where version tells the server which HTTP version is used.One important point here is that this request string is all the server ever sees. So the server doesn't care if the request came from a browser, a link checker, a validator, a search engine robot or if you typed it in manually. It just performs the request and returns the result.</p></li>
+                <li><p>Step 3: What the server does?</p>
+                <p>When the server is set up it is usually configured to use a directory somewhere on disk as its root directory and that there be a default file name (say "index.html") for each directory. This means that if you ask the server for the file "/" (as in "http://www.domain.tld/") you'll get the file index.html in the server root directory. Usually, asking for "/foo/bar.html" will give you the bar.html file from the foo directory directly beneath the server root.Usually, that is. The server can be set up to map "/foo/" into some other directory elsewhere on disk or even to use server-side programs to answer all requests that ask for that directory. The server does not even have to map requests onto a directory structure at all, but can use some other scheme.</p></li>
+              </ul>
+            </div>
+          </div> 
+          <div class="concept">
+            <div class="title">
+              <b>Modulus and Dictionaries</b>
+            </div>
+            <div class="desicription">
+              <p>The Modulus Operator: This is an operator (like +, -, *, or /) that every programming language has. Some calculators have a mod() function button, and many programming languages have a mod() function or similar, expressed as mod(a, n), for example. Some also support expressions that use "%", "mod", or "Mod" as a modulo or remainder operator, such as: a % n or a mod n . </p>
+              <p>Dictionary : (class dict) are mutable mappings tying keys and corresponding values. Python has special syntax to create dictionaries ({key: value})a_dictionary = {"key 1":"value 1", 2:3, 4:[]} . The dictionary syntax is similar to the set syntax, the difference is the presence of colons. The empty literal {} results in an empty dictionary rather than an empty set, which is instead created using the non-literal constructor: set().</p>
+            </div>
+          </div>
+          <div class="concept">
+            <div class="title">
+              <b>Two HTTP Request Methods: GET and POST</b>
+            </div>
+            <div class="desicription">
+              <p>Two commonly used methods for a request-response between a client and server are: GET and POST.</p>
+              <p>Get
+              <ul>
+                <li>GET - Requests data from a specified resource</li>
+                <li>GET requests can be cached</li>
+                <li>GET requests remain in the browser history</li>
+                <li>GET requests can be bookmarked</li>
+                <li>GET requests should never be used when dealing with sensitive data</li>
+                <li>GET requests have length restrictions</li>
+                <li>GET requests should be used only to retrieve data</li>
+              </ul></p>
+              <p>Post
+               <ul>
+                 <li>POST - Submits data to be processed to a specified resource</li>
+                 <li>POST requests are never cached</li>
+                 <li>POST requests do not remain in the browser history</li>
+                 <li>POST requests cannot be bookmarked</li>
+                 <li>POST requests have no restrictions on data length</li>
+               </ul></p>
+            </div>
+          </div>
+          <div class="concept">
+            <div class="title">
+              <b>Database</b>
+            </div>
+            <div class="desicription">
+              <p>A database is an organized collection of data.It is the collection of schemes, tables, queries, reports, views and other objects.Storing data in a scalable web application can be tricky. A user could be interacting with any of dozens of web servers at a given time, and the user's next request could go to a different web server than the previous request. All web servers need to be interacting with data that is also spread out across dozens of machines, possibly in different locations around the world.Check the Vedio <a href="https://www.youtube.com/watch?time_continue=34&v=-8bDdrZhj_k"></a></p>
+            </div>
+          </div>
+          <div class="concept">
+            <div class="title">
+              <b>Input Validation</b>
+            </div>
+            <div class="desicription">
+              <p>Any program input – such as a user typing at a keyboard or a network connection – can potentially be the source of security vulnerabilities and disastrous bugs. All input should be treated as potentially dangerous.Determined attackers can use carefully crafted input to cause programs to run unauthorized commands. This technique (validation)can be used to delete or damage data, run malicious programs, or obtain sensitive information.All program inputs are a potential source of problems. If external data is not validated to ensure that it contains the right type of information, the right amount of information, and the right structure of information, it can cause problems.</p>
+              <p>Real-world Examples:
+              <ul>
+                <li>In December 2005, a Japanese securities trader made a $1 billion typing error, when he mistakenly sold 600,000 shares of stock at 1 yen each instead of selling one share for 600,000 yen. A few lines of code may have averted this error.</li>
+                <li>Web applications are highly vulnerable to input validation errors. Inputting the invalid entry “!@#$%^&*()” on a vulnerable e-commerce site may cause performance issues, or “denial of service”, on a vulnerable system, or invalid passwords such as “pwd’” or “1=1— ” may result in unauthorized access.</li>
+                <li>A Norwegian woman mistyped her account number on an internet banking system. Instead of typing her 11-digit account number, she accidentally typed an extra digit, for a total of 12 numbers. The system discarded the extra digit, and transferred $100,000 to the (incorrect) account. A simple dialog box informing her that she had typed too many digits would have helped avoid this expensive error.</li>
+              </ul></p>
+            </div>
+          </div>
+          <div class="concept">
+            <div class="title">
+              <b>Templates</b>
+            </div>
+            <div class="desicription">
+              <p>Templating, and in particular web templating is a way to represent data in different forms. These forms often (but not always) intended to be readable, even attractive, to a human audience. Frequently, templating solutions involve a document (the template) and data. Template usually looks much like the final output, with placeholders instead of actual data (or example data in simplified form), bears common style and visual elements. Data which is presented using that template may be also separated in two parts - data required to be rendered, and data required for template itself (navigation elements if it is a site, button names if it is some UI). Combining template+data produces the final output which is usually (but not always) a web page of some kind.</p>
+              <P>Templates allow the user to avoid repetition in HTML, which is really important because it will allow you to make complex applications much more easily. They let the user do this because templates are a library that let you build complicated strings, which is mostly in HTML. In simple terms, templates are used because they separate different types of code. It makes the code more readable. It makes the websites more secure. And it also makes the HTML much easier to modify. Template inheritance will allow the user to build a base, which is known as a “skeleton” template that contains all the common elements of your site and defines blocks that child templates can override. For example, you can design a page that defines a simple HTML skeleton document that you might use for a two-column page. And now it’s the job of the “child” template to fill the empty blocks with content. You can then use a block tags to define blocks that child templates can fill in. What these block tags do is tell the template engine that a child template may override those placeholders in the template.</P>
+            </div>
+          </div>
+          <a href="#top"> Back To The Top </a>
+     </div>
+<div class="lesson">
+      <h1 id="lesson-5"> Lesson 5: Your Last Steps.</h1>
+      <div id="brif3"> <!--i used id because the breif is uniq for very lesson-->
+        <ul>
+         <li>Meet Javascript</li>
+         <li>The Power of APIs</li>
+         <li> What I learn from lesson-5 and this course</li>
+        </ul>
+      <div class="concept">
+        <div class="title">
+          <b>Meet Javascript</b></div>
+          <div class="desicription">
+            <p>JavaScript is a high-level, dynamic, untyped, and interpreted programming language. It has been standardized in the ECMAScript language specification. Alongside HTML and CSS, it is one of the three essential technologies of World Wide Web content production; the majority of websites employ it and it is supported by all modern web browsers without plug-ins. JavaScript is prototype-based with first-class functions, making it a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles. It has an API for working with text, arrays, dates and regular expressions, but does not include any I/O, such as networking, storage or graphics facilities, relying for these upon the host environment in which it is embedded. JavaScript was originally developed in 10 days in May 1995 by Brendan Eich, while he was working for Netscape Communications Corporation. Indeed, while competing with Microsoft for user adoption of web technologies and platforms, Netscape considered their client-server offering a distributed OS with a portable version of Sun Microsystems' Java providing an environment in which applets could be run.[citation needed] Because Java was a competitor of C++ and aimed at professional programmers, Netscape also wanted a lightweight interpreted language that would complement Java by appealing to nonprofessional programmers, like Microsoft's Visual Basic (see JavaScript and Java). Although it was developed under the name Mocha, the language was officially called LiveScript when it first shipped in beta releases of Netscape Navigator 2.0 in September 1995, but it was renamed JavaScript when it was deployed in the Netscape browser version 2.0B3. The change of name from LiveScript to JavaScript roughly coincided with Netscape adding support for Java technology in its Netscape Navigator web browser. The final choice of name caused confusion, giving the impression that the language was a spin-off of the Java programming language, and the choice has been characterized as a marketing ploy by Netscape to give JavaScript the cachet of what was then the hot new web programming language.</p>
+          </div>
+        </div>
+      <div class="concept">
+        <div class="title">
+          <b>The power of APIs</b></div>
+        <div class="desicription">
+          <P>API, an abbreviation of application program interface, is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components.  A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together. There are many different types of APIs for operating systems, applications or for websites. Windows, for example, has many API sets that are used by system hardware and applications — when you copy and paste text from one application to another, it is the API that allows that to work.
+          Most operating environments, such as MS-Windows, provide an API so that programmers can write applications consistent with the operating environment. Today, APIs are also specified by websites. For example, Amazon or eBay APIs allow developers to use the existing retail infrastructure to create specialized web stores. Third-party software developers also use Web APIs to create software solutions for end-users.</P>
+          <p>Popular API Examples:</p>
+          <ul>
+            <li> Google Maps API: Google Maps APIs lets developers embed Google Maps on webpages using a JavaScript or Flash interface. The Google Maps API is designed to work on mobile devices and desktop browsers.</li>
+            <li>YouTube APIs: YouTube API: Google's APIs lets developers integrate YouTube videos and functionality into websites or applications. YouTube APIs include the YouTube Analytics API, YouTube Data API, YouTube Live Streaming API, YouTube Player APIs and others.</li>
+            <li>Flickr API: The Flickr API is used by developers to access the Flick photo sharing community data. The Flickr API consists of a set of callable methods, and some API endpoints.</li>
+            <li> Twitter APIs: Twitter offers two APIs. The REST API allows developers to access core Twitter data and the Search API provides methods for developers to interact with Twitter Search and trends data.</li>
+            <li> Amazon Product Advertising API: Amazon's Product Advertising API gives developers access to Amazon's product selection and discovery functionality to advertise Amazon products to monetize a website.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="concept">
+        <div class="title">
+          <h1> What I learn from lesson 5</h1> </div>
+        <div class="desicription">
+          <p> From this course I learned many thinks, thinks when I saw it I thought it was difficult but when you focus and really need to learn you will learn. With lesson 5 and the explanation the purpose of each course, I knew my new courses after this one.You must read, search and explore by your self to understand and keep on the right way. <a href="https://dash.generalassemb.ly/">Dash</a> website was very useful to my with their good explain and excellent examples. The<a href="http://www.webopedia.com/TERM/A/API.html"> APIs</a> was new for me and very important to know about. Focus on your next step and don't west your time(select your goal first).The Udacity team was great and professional in every thing, thank you because of you my aims will change. </p>
+        </div>
+      </div>
+
+      <a href="#top"> Back To The Top </a>
+      </div>
+</body>
+</html>

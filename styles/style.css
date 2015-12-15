@@ -1,0 +1,83 @@
+/*this is my CSS file i used it to control the style of my html page*/
+
+/*this is my CSS file i used it to control the style of my html page*/
+/*adding blue color to the all the page body*/
+body {
+  background: url('/styles/image/proto-anim-theme.png');
+}
+
+h1 {
+  text-align: center; 
+  font-family: Georgia, serif
+}
+/*apply background and styling to lesson class*/
+.lesson {
+        background-color: lightblue;
+        font-size: 22px;
+        margin: 15px auto;
+        padding: 20px;
+        border-radius: 50px;
+        
+}
+.concept {
+          border-style: groove;
+          border-width:10px;
+          border-radius:30px;
+          padding:25px;
+          margin:10px;
+}
+.title{
+  text-align:center;
+}
+mark {font-family: verdana;
+      background-color: Gainsboro;
+      }
+
+.form {
+        background-color: lightblue;
+        font-size: 22px;
+        margin: 15px auto;
+        padding: 20px;
+        border-radius: 50px;
+        text-align: center;
+}
+
+.comments {
+        background-color: lightblue;
+        font-size: 15px;
+        margin: 10px auto;
+        padding: 10px;
+        border-radius: 30px;
+        font-family: "Times New Roman", Times, serif
+    }
+.error{
+        background-color: lightblue;
+        font-size: 40px;
+        margin: 15px auto;
+        padding: 20px;
+        border-radius: 50px;
+        text-align: center;
+        color: red;      
+    }
+.buttons{
+        border-style: groove;
+          border-width:10px;
+          border-radius:30px;
+          padding:25px;
+          margin:10px;
+          text-align: center;
+}
+button{
+  font-family: 'comic sans ms';
+  font-weight: bold;
+  color: #14396A !important;
+  font-size: 40px;
+  text-shadow: 1px 1px 0px #7CACDE;
+  box-shadow: 1px 1px 1px #BEE2F9;
+  padding: 10px 25px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 30px;
+  border: 2px solid #3866A3;
+  background:lightblue;
+}
